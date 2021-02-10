@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=0.5">
+
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+		</style>
+
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+		</style>
+
+		<title>World of Coding</title>
+	</head>
+
+	<body oncontextmenu="return false;" style="background-color: black; margin: 0; padding: 0; background-repeat: no-repeat; background-position: 150% 100%; background-size: auto 120%; background-attachment: fixed; user-select: none;">
+		<!--background-image: url('https://cdn.discordapp.com/splashes/661257119588417627/c9120a6509094e351fd113828de9f533.jpg?size=1536'); -->
+
+		<p style="font-family: 'Audiowide', cursive; margin: 0; position: absolute; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); font-size: 150px; color: red; text-shadow: 0px 0px 50px red;">
+			<b>
+				A<span style="visibility: hidden;">..</span>T<span style="visibility: hidden;">..</span>H<span style="visibility: hidden;">..</span>E<span style="visibility: hidden;">..</span>O<span style="visibility: hidden;">..</span>S
+			</b>
+		</p>
+
+		<section class="blockDark" style="width: 325px; height: 400px; background-color: #151515; border-radius: 10px; box-shadow: 10px 10px 30px; margin: 0; position: absolute; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); padding: 0;">
+				<img src="https://cdn.discordapp.com/attachments/794507795465502730/808982241170292806/768364734469636097.gif" style="border-radius: 100px; height: 120px; width: 120px; border: 4px solid #1b1d1c; margin: 0; position: absolute; top: 25%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);" draggable="false">
+
+				<p style="font-family: 'Montserrat', sans-serif; margin: 0; position: absolute; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); font-size: 28px; color: #ffffff;">
+					<b>
+						Atheos
+					</b>
+				</p>
+
+				<p style="font-family: 'Montserrat', sans-serif; margin: 0; position: absolute; top: 56%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); font-size: 16px; color: #99aab5">
+					<b>
+						You're<span style="color: #151515;">..</span>About<span style="color: #151515;">..</span>To<span style="color: #151515;">..</span>Join<span style="color: #151515;">..</span>This<span style="color: #151515;">..</span>Server.
+					</b>
+				</p>
+
+				<section style="background-color: #2C2F33; width: 200px; height: 30px; margin: 0; position: absolute; top: 65%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); font-size: 14px; border-radius: 100px">
+					<p style="font-family: 'Montserrat', sans-serif; margin: 0; position: absolute; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); font-size: 14px; color: #ffffff;">
+						<b>
+							<span style="color: #2C2F33;">....</span><strong><span id="discord-counter1"></span></strong><span style="color: #2C2F33;">..</span>Members<span style="color: #2C2F33;">..</span>Online
+						</b>
+					</p>
+				</section>
+
+				<section style="background-color: #00db6e; margin: 0; position: absolute; top: 65%; left: 24.5%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); font-size: 14px; color: #ffffff; border-radius: 100px; width: 10px; height: 10px; box-shadow: 0px 0px 15px #00db6e">
+				</section>
+
+				<a href="https://discord.gg/dX4pMeZKnw">
+					<button style="width: 300px; height: 35px; font-family: 'Montserrat', sans-serif; margin: 0; position: absolute; top: 92.5%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); font-size: 19px; color: #ffffff; background-color: #7289da; border-radius: 10px; border: 0; outline: none;">
+						<b>
+							Accept<span style="color: #7289da;">..</span>Invite
+						</b>
+					</button>
+				</a>
+		</section>
+
+    	<script type="text/javascript">
+			var request = new XMLHttpRequest();
+
+			request.open('GET', 'https://discord.com/api/guilds/794507794689687554/widget.json', true);
+
+			request.onload = function() {
+				if (request) {
+			        var data = JSON.parse(request.responseText);
+			        document.getElementById("discord-counter1").innerHTML = data.presence_count;
+			    } else {
+			        }
+			    };
+
+			    request.onerror = function() {
+			    };
+
+			    request.send();
+		</script>
+
+		<script type="text/javascript">
+			$(function () {
+				$(document).scroll(function () {
+					var $nav = $("#navbar");
+					$nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+				});
+			});
+		</script>
+	</body>
+</html>
